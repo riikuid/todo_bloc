@@ -73,6 +73,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.2"
+  d_method:
+    dependency: "direct main"
+    description:
+      name: d_method
+      sha256: "769b5fa82442eca00c9014e5ba09f6f524d4a04c9be5dc657bbea24d9e788c1f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.4"
   fake_async:
     dependency: transitive
     description:

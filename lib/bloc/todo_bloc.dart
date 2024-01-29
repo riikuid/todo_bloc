@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:d_method/d_method.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_bloc/model/todo.dart';
@@ -48,5 +49,17 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
       ...state.todos,
       todo,
     ], TodoStatus.success));
+  }
+
+  @override
+  void onChange(Change<TodoState> change) {
+    // DMethod.log(change.toString());
+    super.onChange(change);
+  }
+
+  @override
+  void onTransition(Transition<TodoEvent, TodoState> transition) {
+    // DMethod.logTitle(transition.event.toString(), transition.toString());
+    super.onTransition(transition);
   }
 }
