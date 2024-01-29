@@ -10,9 +10,9 @@ class OnAddTodo extends TodoEvent {
 }
 
 class OnRemoveTodo extends TodoEvent {
-  final int index;
+  final Todo todo;
 
-  OnRemoveTodo({required this.index});
+  OnRemoveTodo({required this.todo});
 }
 
 class OnUpdateTodo extends TodoEvent {

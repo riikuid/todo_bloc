@@ -75,12 +75,12 @@ class _TodoPageState extends State<TodoPage> {
     );
   }
 
-  removeTodo(int index) {
+  removeTodo(Todo todo) {
     DInfo.dialogConfirmation(
             context, "Remove ToDo", "Yakin ingin menghapus ToDo ini?")
         .then((bool? value) {
       if (value ?? false) {
-        context.read<TodoBloc>().add(OnRemoveTodo(index: index));
+        context.read<TodoBloc>().add(OnRemoveTodo(todo: todo));
         DInfo.snackBarError(context, 'Success Remove ToDo');
       }
     });
@@ -118,7 +118,7 @@ class _TodoPageState extends State<TodoPage> {
                         updateTodo(item, index);
                         break;
                       case 'remove':
-                        removeTodo(index);
+                        removeTodo(item);
                         break;
                       default:
                         break;
